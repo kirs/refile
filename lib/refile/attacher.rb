@@ -68,6 +68,8 @@ module Refile
     end
 
     def set(value)
+      return if value.nil?
+
       if value.is_a?(String)
         retrieve!(value)
       else
